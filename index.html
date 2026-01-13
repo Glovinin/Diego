@@ -320,15 +320,82 @@
             max-width: 980px;
             margin: 0 auto;
             padding: 80px 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            max-width: 250px;
+        }
+
+        .footer-col h5 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: var(--text-secondary);
             font-size: 12px;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
         }
 
         @media (prefers-color-scheme: dark) {
             footer {
                 border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .footer-bottom {
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
         }
 
@@ -428,7 +495,44 @@
     </section>
 
     <footer>
-        <p>Copyright © 2026 Diego Rocha. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h4>Diego Rocha</h4>
+                <p>Criando o futuro da web, um pixel de cada vez. Lisboa, Portugal.</p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Explorar</h5>
+                <ul>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Social</h5>
+                <ul>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter/X</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Termos</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Copyright © 2026 Diego Rocha. Todos os direitos reservados.</p>
+            <p>Designed in Lisbon.</p>
+        </div>
     </footer>
 
     <script>
