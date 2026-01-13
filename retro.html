@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Diego Rocha :: Home Page</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00FF00;
+            font-family: "Courier New", Courier, monospace;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Scanline effect overlay */
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        a {
+            color: #00FFFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #00FFFF;
+            color: #000000;
+            cursor: help;
+        }
+
+        .marquee-bar {
+            background-color: #000080;
+            color: white;
+            padding: 5px;
+            border-bottom: 2px solid #FFFFFF;
+            font-weight: bold;
+            font-family: "MS Sans Serif", Geneva, sans-serif;
+        }
+
+        .main-container {
+            width: 800px;
+            margin: 20px auto;
+            border: 4px class white;
+            /* retro ridge effect attempt */
+            border-style: ridge;
+            padding: 10px;
+            background-color: #050505;
+        }
+
+        .header {
+            text-align: center;
+            background-image: linear-gradient(#002200, #000000);
+            border: 2px solid #00FF00;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 4px 4px #FF00FF;
+            margin: 10px 0;
+            letter-spacing: 5px;
+        }
+
+        .blink {
+            animation: blinker 1s step-end infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .layout-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .sidebar {
+            width: 200px;
+            vertical-align: top;
+            text-align: center;
+            border-right: 1px dashed #00FF00;
+            padding-right: 10px;
+        }
+
+        .content-area {
+            vertical-align: top;
+            padding-left: 20px;
+        }
+
+        .pixel-border {
+            border: 3px solid #FFFFFF;
+            box-shadow: 5px 5px 0px #FF00FF;
+            image-rendering: pixelated;
+        }
+
+        .menu-box {
+            border: 1px solid #00FF00;
+            background-color: #001100;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: block;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        .code-block {
+            background-color: #111;
+            border: 1px dotted #888;
+            padding: 10px;
+            font-family: monospace;
+            color: #FFFF00;
+            text-align: left;
+            margin: 10px 0;
+        }
+
+        .hit-counter {
+            background: black;
+            color: red;
+            font-family: Impact, sans-serif;
+            border: 2px inset grey;
+            padding: 2px 8px;
+            font-size: 1.2em;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #00FF00;
+            display: inline-block;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scanlines"></div>
+
+    <div class="marquee-bar">
+        <marquee scrollamount="6" scrolldelay="100">
+            *** BEM-VINDO AO CYBERESPAÇO DE DIEGO ROCHA *** HTML & CSS MASTER EM TREINAMENTO *** SIGA A LEBRE BRANCA ***
+            CODING VIBE ***
+        </marquee>
+    </div>
+
+    <div class="main-container">
+        <!-- Header -->
+        <div class="header">
+            <img src="images/avatar.png" width="160" height="160" class="pixel-border" alt="Diego Avatar">
+            <h1>DIEGO ROCHA</h1>
+            <p style="font-size: 1.2em;">&lt; <span class="blink">HELLO WORLD</span> /&gt;</p>
+        </div>
+
+        <table class="layout-table">
+            <tr>
+                <!-- Sidebar -->
+                <td class="sidebar">
+                    <div class="menu-box">
+                        <div style="background: #00FF00; color: black; margin: -10px -10px 10px -10px; padding: 2px;">
+                            NAVEGAÇÃO</div>
+                        <a href="#" class="menu-item">[ INÍCIO ]</a>
+                        <a href="#" class="menu-item">[ PROJETOS ]</a>
+                        <a href="#" class="menu-item">[ SOBRE MIM ]</a>
+                        <a href="#" class="menu-item">[ LINKS ]</a>
+                        <a href="#" class="menu-item">[ E-MAIL ]</a>
+                    </div>
+
+                    <br>
+                    <img src="images/construction.png" width="120" style="image-rendering: pixelated;"
+                        alt="Em construção">
+                    <p style="font-size: 0.8em; color: yellow;">SITE EM CONSTRUÇÃO</p>
+
+                    <br><br>
+                    <p>Visitantes:</p>
+                    <div class="hit-counter">004815</div>
+
+                    <br><br>
+                    <div style="border: 1px solid white; padding: 5px; font-size: 0.7em;">
+                        Created with<br>NOTEPAD<br>
+                        <span style="color: #FF00FF;">♥</span>
+                    </div>
+                </td>
+
+                <!-- Main Content -->
+                <td class="content-area">
+                    <h2>Olá, Internet!</h2>
+                    <p>Meu nome é <b>Diego Rocha</b> e este é o meu cantinho na World Wide Web.</p>
+                    <p>Estou começando minha jornada no mundo da programação. Gosto de criar coisas, resolver problemas
+                        e beber muito café.</p>
+
+                    <!-- Guestbook Input -->
+                    <div style="border: 1px solid #00FF00; padding: 10px; margin: 20px 0; background: #001100;">
+                        <label for="guest-msg" style="color: #00FF00; font-weight: bold;"> &gt; DEIXE UM
+                            RECADO:</label><br>
+                        <input type="text" id="guest-msg"
+                            style="width: 90%; background: black; border: none; border-bottom: 2px solid #00FF00; color: #00FF00; font-family: 'Courier New', monospace; font-size: 1.1em; padding: 5px; margin-top: 5px; outline: none;"
+                            placeholder="Escreva aqui..." autofocus>
+                    </div>
+
+                    <div class="code-block">
+                        &gt; status: aprendendo...<br>
+                        &gt; current_stack: ["HTML", "CSS", "Vontade"]<br>
+                        &gt; mood: 🚀
+                    </div>
+
+                    <h3>Meus Objetivos 2026</h3>
+                    <ul>
+                        <li>Dominar HTML & CSS</li>
+                        <li>Entender como o JavaScript funciona (mágica?)</li>
+                        <li>Criar meu primeiro jogo</li>
+                        <li>Não quebrar a produção (muito)</li>
+                    </ul>
+
+                    <h3>Diário de Bordo</h3>
+
+                    <p><b>13 de Janeiro</b><br>
+                        Finalmente coloquei este site no ar! Usei tabelas para o layout porque os div são complicados. O
+                        visual retro é o melhor.</p>
+
+                    <p><b>10 de Janeiro</b><br>
+                        Descobri o que é um "tag". Aparentemente tudo precisa fechar. Quem diria?</p>
+
+                    <br>
+                    <hr color="#00FF00">
+                    <center>
+                        <p><i>"Programs must be written for people to read, and only incidentally for machines to
+                                execute."</i></p>
+                        <a href="#">[ TOPO ]</a>
+                    </center>
+                </td>
+            </tr>
+        </table>
+
+        <div style="text-align: center; margin-top: 30px; font-size: 0.8em; color: #666;">
+            &copy; 1999-2026 Diego Rocha Designs. Otimizado para Internet Explorer 5.
+        </div>
+    </div>
+</body>
+
+</html>
